@@ -2,11 +2,9 @@
 using System.Collections;
 
 public class SoundObject : MonoBehaviour {
-
-	//the percived loudness of the object as percived by the noise wheel
-	public float priority;
+	
 	// a representation of logarithmic falloff
-	public float soundFalloff;
+	public float soundFalloffDist;
 
 
 	//sound prefab, do not use in code!
@@ -31,11 +29,6 @@ public class SoundObject : MonoBehaviour {
 		RemoveFromSoundWheel ();
 	}
 
-	void OnDestroy()
-	{
-		RemoveFromSoundWheel ();
-
-	}
 
 	void RemoveFromSoundWheel()
 	{
